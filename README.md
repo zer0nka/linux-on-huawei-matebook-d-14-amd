@@ -20,7 +20,7 @@ I am running Manjaro on it. This repository documents what works and what does n
 | Processor | AMD Ryzen 5 2500U | 💚 Yes | (TODO: document)  |
 | Graphics | AMD Raven Ridge [Radeon Vega Series / Radeon Vega Mobile Series] |  💚 Yes | via AMDGPU (TODO: document) |
 | Memory | 7098 MB |  💚 Yes | Listed usable, hardware is 8GB |
-| Display | 14 inch 16:9, 1920x1080 (FHD) | 💚 Yes | resolution is correctly detected by `xrandr`, backlight control does not work via native function keys, but works via additional scripts (see [Display Backlight](#display-backlight)) |
+| Display | 14 inch 16:9, 1920x1080 (FHD) | 💚 Yes | resolution is correctly detected by `xrandr`(TODO: HiDPI) |
 | Storage | SanDisk SD9SN8W256G1027, 256 GB | 💚 Yes | via standard kernel driver (TODO: document) |
 | Soundcard  | Advanced Micro Devices, Inc. [AMD/ATI] | 💚 Yes  | via standard kernel driver, only tested with `pulseaudio` (TODO: document) |
 | Speakers  | "Dolby ATMOS" | 💚 Yes | Seems fine, but levels may need adjusting (TODO: document) | 
@@ -30,9 +30,9 @@ I am running Manjaro on it. This repository documents what works and what does n
 | Airplane Mode | Wifi+Bluetooth | 💚 Yes | ([see details below](#airplane-mode)) |
 | Battery | 40 Wh Lithium-Polymer | 💚 Yes | Everything works: current status, chargin/discharging rate and remaining battery time estimates |
 | Lid | ACPI-compliant |  💚 Yes | Works as expected: I can just close the lid and it sleeps  |
-| Keyboard |  | 💚 Yes | Everything works out of the box, including function keys and backlight | 
-| Touchpad | | 💚 Yes | Tap-to-click can be enabled via `libinput` ([see details below](#touchpad)) |
+| Touchpad | ELAN | 💚 Yes | Tap-to-click can be enabled via `libinput` ([see details below](#touchpad)) |
 | Touchscreen | | 💚 Yes | (TODO: document) |
+| Keyboard |  | 💚 Yes | Everything works out of the box, including function keys and backlight | 
 
 ## GRUB
 
