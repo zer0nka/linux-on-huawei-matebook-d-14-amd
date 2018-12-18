@@ -28,7 +28,7 @@ I am running Manjaro on it. This repository documents what works and what does n
 | Wifi | Intel Dual Band Wireless-AC 8265 (a/b/g/n/ac) | 💚 Yes | (TODO: document) | 
 | Bluetooth | Intel (idVendor:0x8087, idProduct:0x0a2b) | 💚 Yes | (TODO: document) |
 | Airplane Mode | Wifi+Bluetooth | 💚 Yes | ([see details below](#airplane-mode)) |
-| Battery | 40 Wh Lithium-Polymer | 💚 Yes | Everything works: current status, chargin/discharging rate and remaining battery time estimates |
+| Battery | 40 Wh Lithium-Polymer | 💚 Yes | Everything works: current status, charging/discharging rate and remaining battery time estimates |
 | Lid | ACPI-compliant |  💚 Yes | Works as expected: I can just close the lid and it sleeps  |
 | Touchpad | ELAN | 💚 Yes | Tap-to-click can be enabled via `libinput` ([see details below](#touchpad)) |
 | Touchscreen | | 💚 Yes | (TODO: document) |
@@ -113,7 +113,17 @@ systemctl enable tlp-sleep.service
 #### lm_sensors
 
 ```
-pacman -S lm_sensors && sudo sensors-detect
+pacman -S lm_sensors && sudo sensors-detect && sudo pwmconfig
+```
+
+#### amdgpu-fancontrol
+
+```
+mkdir -p ~/.builds
+git clone https://github.com/grmat/amdgpu-fancontrol.git
+cd amdgpu-fancontrol
+makepkg -sri
+systemctl enable amdgpu-fancontrol --now
 ```
 
 ## Airplane Mode
