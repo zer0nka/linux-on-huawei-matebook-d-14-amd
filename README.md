@@ -17,8 +17,8 @@ I am running Manjaro on it. This repository documents what works and what does n
 
 | Device | Model |  Works | Notes |
 | --- | --- |  :---: | --- |
-| Processor | AMD Ryzen 5 2500U | 💚 Yes | (TODO: document)  |
-| Graphics | AMD Raven Ridge [Radeon Vega Series / Radeon Vega Mobile Series] |  💚 Yes | via AMDGPU (TODO: document) |
+| Processor | AMD Ryzen 5 2500U | 💚 Yes | (TODO: document) |
+| Graphics | AMD Raven Ridge [Radeon Vega Series / Radeon Vega Mobile Series] |  💚 Yes | via AMDGPU ([see details below](#grub)) |
 | Memory | 7098 MB |  💚 Yes | Listed usable, hardware is 8GB |
 | Display | 14 inch 16:9, 1920x1080 (FHD) | 💚 Yes | resolution is correctly detected by `xrandr`(TODO: HiDPI) |
 | Storage | SanDisk SD9SN8W256G1027, 256 GB | 💚 Yes | via standard kernel driver (TODO: document) |
@@ -72,7 +72,7 @@ xinput enable 'ELAN2203:00 04F3:309A Touchpad'
 
 ##### Manual
 
-Asign a keyboard shortcut to the script or similar
+Assign a keyboard shortcut to the script or similar
 
 ##### Automatic
 
