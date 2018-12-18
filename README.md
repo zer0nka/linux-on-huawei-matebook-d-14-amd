@@ -34,6 +34,12 @@ I am running Manjaro on it. This repository documents what works and what does n
 | Touchpad | | 💚 Yes | Tap-to-click can be enabled via `libinput` ([see details below](#touchpad)) |
 | Touchscreen | | 💚 Yes | (TODO: document) |
 
+## GRUB
+
+`/etc/default/grub`
+```
+GRUB_CMDLINE_LINUX="vga=current ivrs_ioapic[4]=00:14.0 ivrs_ioapic[5]=00:00.2 idle=nomwait acpi_osi=! acpi_osi='Windows 2015' acpi_enforce_resources=lax scsi_mod.use_blk_mq=1
+```
 
 ## Touchpad
 
@@ -96,7 +102,19 @@ Been testing it with Manjaro Unstable + kernel 4.19.8-2. I'm using TLP and KDE. 
 #### TLP
 
 > I use `tlp` for power management.
+```
+sudo pacman -S --needed tlp tlp-rdw iw smartmontools ethtool x86_energy_perf_policy
+systemctl mask systemd-rfkill.service
+systemctl mask systemd-rfkill.socket
+systemctl enable tlp.service
+systemctl enable tlp-sleep.service
+```
 
+#### lm_sensors
+
+```
+pacman -S lm_sensors && sudo sensors-detect
+```
 
 ## Airplane Mode
 
