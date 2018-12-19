@@ -8,7 +8,7 @@ linux-on-huawei-matebook-d-14
 
 ## Background
 
-First Huawei MateBook D 14 AMD was released in 2018.
+Huawei MateBook D 14 AMD was released in 2018.
 It came with proprietary Microsoft Windows 10 and there was very little information available on its Linux support. 
 
 I am running Manjaro on it. This repository documents what works and what does not.
@@ -30,7 +30,7 @@ I am running Manjaro on it. This repository documents what works and what does n
 | Airplane Mode | Wifi+Bluetooth | 💚 Yes | ([see details below](#airplane-mode)) |
 | Battery | 40 Wh Lithium-Polymer | 💚 Yes | Everything works: current status, charging/discharging rate and remaining battery time estimates |
 | Lid | ACPI-compliant |  💚 Yes | Works as expected: I can just close the lid and it sleeps  |
-| Touchpad | ELAN | 💚 Yes | Tap-to-click can be enabled via `libinput` ([see details below](#touchpad)) |
+| Touchpad | ELAN | 💚 Yes | Using synaptics, also sometimes-bug can be squashed with workaround ([see details below](#touchpad)) |
 | Touchscreen | | 💚 Yes | (TODO: document) |
 | Keyboard |  | 💚 Yes | Everything works out of the box, including function keys and backlight | 
 
@@ -120,6 +120,7 @@ pacman -S lm_sensors && sudo sensors-detect && sudo pwmconfig
 
 ```
 mkdir -p ~/.builds
+cd .builds
 git clone https://github.com/grmat/amdgpu-fancontrol.git
 cd amdgpu-fancontrol
 makepkg -sri
@@ -133,7 +134,7 @@ Works as expected.
 `rfkill list` shows current status of radio interfaces:
 
 ```
- rfkill list                                                                      ~
+ rfkill list
 0: phy0: Wireless LAN
 	Soft blocked: no
 	Hard blocked: no
