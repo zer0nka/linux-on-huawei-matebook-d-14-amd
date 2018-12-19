@@ -97,7 +97,9 @@ systemctl enable restart-touchpad.service --now
 
 ## Power Management
 
-Been testing it with Manjaro Unstable + kernel 4.19.8-2. I'm using TLP and KDE.  With this setup and my workflow (mostly browser + media) the battery lasts for around 6-7 hours. Switching to more intensive things like code compilation or video encoding for prolonged time cuts battery to around 4-5 hours. 
+Testing done with Manjaro Unstable + kernel 4.19.8-2. 
+With this setup and my workflow (mostly browser + media) the battery lasts for around 6-7 hours. Switching to more intensive things like code compilation or video encoding for prolonged time cuts battery to around 4-5 hours. 
+Fans were noticeably loud until using amdgpu-fancontrol. 
 
 #### TLP
 
@@ -113,11 +115,12 @@ systemctl enable tlp-sleep.service
 #### lm_sensors
 
 ```
-pacman -S lm_sensors && sudo sensors-detect && sudo pwmconfig
+sudo pacman -S lm_sensors && sudo sensors-detect && sudo pwmconfig
 ```
 
 #### amdgpu-fancontrol
-
+The project is [here](https://github.com/grmat/amdgpu-fancontrol.git).
+Please make sure to follow [lm_sensors](lm_sensors) instructions first. 
 ```
 mkdir -p ~/.builds
 cd .builds
@@ -134,7 +137,7 @@ Works as expected.
 `rfkill list` shows current status of radio interfaces:
 
 ```
- rfkill list
+$ rfkill list
 0: phy0: Wireless LAN
 	Soft blocked: no
 	Hard blocked: no
