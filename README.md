@@ -42,7 +42,7 @@ I am running Manjaro on it. This repository documents what works and what does n
 | Lid | ACPI-compliant |  💚 Yes | Works as expected: I can just close the lid and it sleeps  |
 | Touchpad | ELAN | 💚 Yes | Using synaptics, also sometimes-bug can be squashed with workaround ([see details below](#touchpad)) |
 | Touchscreen | | 💚 Yes | (TODO: document) |
-| Keyboard |  | 💚 Yes | Everything works out of the box, including function keys and backlight | 
+| Keyboard |  | 💚 Yes | Everything works out of the box, including function keys and backlight. **Excluding microphone mute key** | 
 
 <a name="boot"></a>
 ## GRUB
