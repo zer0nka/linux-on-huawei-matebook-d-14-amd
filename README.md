@@ -49,7 +49,7 @@ I am running Manjaro on it. This repository documents what works and what does n
 
 `/etc/default/grub`
 ```
-GRUB_CMDLINE_LINUX="vga=current ivrs_ioapic[4]=00:14.0 ivrs_ioapic[5]=00:00.2 idle=nomwait acpi_osi=! acpi_osi='Windows 2015' acpi_enforce_resources=lax scsi_mod.use_blk_mq=1
+GRUB_CMDLINE_LINUX="vga=current ivrs_ioapic[4]=00:14.0 ivrs_ioapic[5]=00:00.2 idle=nomwait acpi_osi=! acpi_osi='Windows 2015' acpi_enforce_resources=lax scsi_mod.use_blk_mq=1"
 ```
 
 <a name="touchpad"></a>
@@ -143,20 +143,3 @@ makepkg -sri
 systemctl enable amdgpu-fancontrol --now
 ```
 
-## Airplane Mode
-
-Works as expected.
-
-`rfkill list` shows current status of radio interfaces:
-
-```
-$ rfkill list
-0: phy0: Wireless LAN
-	Soft blocked: no
-	Hard blocked: no
-11: hci0: Bluetooth
-	Soft blocked: no
-	Hard blocked: no
-```
-
-Toggling "airplane mode": `rfkill block all` / `rfkill unblock all`
