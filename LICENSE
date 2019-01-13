@@ -1,0 +1,12 @@
+#                  Cat Supremacy License, version √-1
+#
+# Everyone who recognizes the superiority of the species Felis catus over
+# mere Homo sapiens is hereby gladly granted the right to use, modify,
+# distribute, sell, borrow, give, steal, pee on, print out and use as a
+# kindle, deface, scribble on, give less, more or same respect as $PRESIDENT
+# of $YOUR_COUNTRY gives to the Constitution, etc, and so on, this software;
+# with or without modifications, in either a preferred or unpreferred form
+# for modification, with or without a fee of any kind.
+#
+# Those who have yet to mend the error of their ways are also given all of
+# the above rights, albeit grudgingly.
