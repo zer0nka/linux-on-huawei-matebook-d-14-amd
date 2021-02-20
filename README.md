@@ -1,3 +1,5 @@
+This is mirror repo from https://gitlab.com/cscs/linux-on-huawei-matebook-d-14-amd
+
 linux-on-huawei-matebook-d-14
 
 # GNU/Linux on MateBook D 14" (AMD Ryzen 5 2500U model KPL-W0X in 2018)
